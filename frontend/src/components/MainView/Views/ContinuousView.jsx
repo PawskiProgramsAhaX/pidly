@@ -1,5 +1,5 @@
 import { useRef, useMemo, useEffect } from 'react';
-import { isContinuousView } from '../hooks/useContinuousLayout';
+import { isContinuousView } from '../Hooks/useContinuousLayout';
 import '../PDFViewerArea.css';
 import ContinuousPage from './ContinuousPage';
 import { ROTATE_CURSOR } from '../renderSelectionHandles';
