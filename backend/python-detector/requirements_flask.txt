@@ -1,0 +1,8 @@
+flask
+flask-cors
+paddleocr
+paddlepaddle
+pdf2image
+opencv-python==4.10.0.84
+numpy==1.26.4
+pillow

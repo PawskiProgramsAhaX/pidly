@@ -1,0 +1,2319 @@
+.project-symbols-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.project-symbols-page .symbols-header {
+  background: #000000;
+  border-bottom: 1px solid #333;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.project-symbols-page .symbols-header .back-btn {
+  background: none;
+  border: 1px solid #555;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: all 0.2s;
+}
+
+.project-symbols-page .symbols-header .back-btn:hover {
+  background: #333;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.project-symbols-page .symbols-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.project-symbols-page .symbols-header .brand-title {
+  margin-left: auto;
+  color: #ffffff;
+}
+
+.project-symbols-page .symbols-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.project-symbols-page .symbols-sidebar {
+  background: #1e1e1e;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.project-symbols-page .sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin: 4px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.project-symbols-page .sidebar-item:hover {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.project-symbols-page .sidebar-item.selected {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+.project-symbols-page .home-item {
+  margin: 8px 12px 4px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+}
+
+.project-symbols-page .home-item:hover {
+  background: #252525;
+}
+
+.project-symbols-page .home-item.selected {
+  background: #2a2a2a;
+}
+
+.project-symbols-page .item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.project-symbols-page .create-symbol-btn {
+  margin: 8px 12px;
+  padding: 10px 16px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  outline: none;
+}
+
+.project-symbols-page .create-symbol-btn:hover {
+  background: #2980b9;
+}
+
+.project-symbols-page .create-symbol-btn.selected {
+  background: #2980b9;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+.project-symbols-page .symbols-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 8px 0;
+  background: #1e1e1e;
+}
+
+.project-symbols-page .symbols-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.project-symbols-page .section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-symbols-page .symbol-count {
+  font-size: 11px;
+  color: #aaa;
+  background: #333;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.project-symbols-page .symbols-search {
+  padding: 0 12px 12px;
+}
+
+.project-symbols-page .symbols-search input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.project-symbols-page .symbols-search input::placeholder {
+  color: #888;
+}
+
+.project-symbols-page .symbols-search input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.project-symbols-page .symbols-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px 8px;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2a2a2a;
+}
+
+.project-symbols-page .symbol-category {
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .category-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  margin-bottom: 4px;
+}
+
+.project-symbols-page .symbol-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-bottom: 2px;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.project-symbols-page .symbol-list-item:hover {
+  background: #252525;
+}
+
+.project-symbols-page .symbol-list-item.selected {
+  background: #2a2a2a;
+  border-left: 3px solid #3498db;
+}
+
+.project-symbols-page .symbol-test-btn {
+  position: absolute;
+  right: 8px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-symbols-page .symbol-list-item:hover .symbol-test-btn {
+  opacity: 1;
+}
+
+.project-symbols-page .symbol-test-btn:hover {
+  background: #2980b9;
+}
+
+.project-symbols-page .symbol-thumbnail {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: #333;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.project-symbols-page .symbol-thumbnail.svg-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-symbols-page .symbol-thumbnail.svg-thumb svg {
+  width: 100%;
+  height: 100%;
+}
+
+.project-symbols-page .symbol-thumbnail.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.project-symbols-page .symbol-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-symbols-page .symbol-item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-symbols-page .symbol-item-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+}
+
+.project-symbols-page .no-symbols {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.project-symbols-page .sidebar-resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  transition: background 0.2s;
+}
+
+.project-symbols-page .sidebar-resize-handle:hover {
+  background: rgba(52, 152, 219, 0.3);
+}
+
+/* Main Content */
+.project-symbols-page .symbols-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  background: #1a1a1a;
+}
+
+/* Home View */
+.project-symbols-page .home-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project-symbols-page .home-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.project-symbols-page .home-header h2 {
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.project-symbols-page .home-subtitle {
+  color: #888;
+  font-size: 16px;
+  margin: 0;
+}
+
+.project-symbols-page .home-stats-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.project-symbols-page .stat-card {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px 32px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.project-symbols-page .stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-symbols-page .stat-label {
+  font-size: 14px;
+  color: #888;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.project-symbols-page .home-actions-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.project-symbols-page .home-actions-section h3 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.project-symbols-page .home-actions-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.project-symbols-page .action-card {
+  background: #252525;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 160px;
+}
+
+.project-symbols-page .action-card:hover {
+  background: #2a2a2a;
+  border-color: #3498db;
+}
+
+.project-symbols-page .action-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.project-symbols-page .action-icon {
+  font-size: 20px;
+}
+
+.project-symbols-page .action-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+}
+
+.project-symbols-page .action-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Feature Preview */
+.project-symbols-page .feature-preview {
+  background: #252525;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px 32px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.project-symbols-page .feature-preview h3 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.project-symbols-page .feature-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-symbols-page .feature-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-symbols-page .step-number {
+  width: 32px;
+  height: 32px;
+  background: #3498db;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.project-symbols-page .step-content {
+  flex: 1;
+}
+
+.project-symbols-page .step-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.project-symbols-page .step-desc {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Create Symbol View */
+.project-symbols-page .create-symbol-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-symbols-page .create-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-symbols-page .create-page-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+}
+
+.project-symbols-page .creation-mode-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.project-symbols-page .mode-tab {
+  padding: 8px 16px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.project-symbols-page .mode-tab:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.project-symbols-page .mode-tab.active {
+  background: #3498db;
+  border-color: #3498db;
+  color: #fff;
+}
+
+/* Draw Mode Content */
+.project-symbols-page .draw-mode-content {
+  margin-bottom: 16px;
+}
+
+.project-symbols-page .markup-tools-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .tools-label {
+  color: #888;
+  font-size: 13px;
+}
+
+.project-symbols-page .markup-tools {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.project-symbols-page .markup-tool-btn {
+  width: 36px;
+  height: 36px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  color: #ccc;
+}
+
+.project-symbols-page .markup-tool-btn:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.project-symbols-page .markup-tool-btn.active {
+  background: #3498db;
+  border-color: #3498db;
+  color: #fff;
+}
+
+.project-symbols-page .tool-icon {
+  font-size: 16px;
+}
+
+.project-symbols-page .tool-properties {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-symbols-page .prop-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-symbols-page .prop-group label {
+  color: #888;
+  font-size: 12px;
+}
+
+.project-symbols-page .prop-group input[type="color"] {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.project-symbols-page .prop-group input[type="range"] {
+  width: 60px;
+  cursor: pointer;
+}
+
+.project-symbols-page .prop-group span {
+  color: #fff;
+  font-size: 12px;
+  min-width: 30px;
+}
+
+.project-symbols-page .no-fill-btn {
+  width: 24px;
+  height: 24px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-symbols-page .no-fill-btn.active {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+}
+
+.project-symbols-page .text-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #252525;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .text-input-row label {
+  color: #888;
+  font-size: 12px;
+}
+
+.project-symbols-page .text-input-row input[type="text"] {
+  flex: 1;
+  padding: 6px 10px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.project-symbols-page .text-input-row input[type="number"] {
+  width: 60px;
+  padding: 6px 8px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.project-symbols-page .polyline-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #252525;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .polyline-controls span {
+  color: #888;
+  font-size: 13px;
+}
+
+.project-symbols-page .polyline-controls button {
+  padding: 6px 12px;
+  background: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.project-symbols-page .polyline-controls button:hover {
+  background: #2980b9;
+}
+
+.project-symbols-page .polyline-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Extract Mode Content */
+.project-symbols-page .extract-mode-content {
+  margin-bottom: 16px;
+}
+
+.project-symbols-page .extract-instructions {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .extraction-settings {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* PDF Selection */
+.project-symbols-page .pdf-selection-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.project-symbols-page .pdf-selection-row label {
+  color: #888;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.project-symbols-page .searchable-dropdown {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.project-symbols-page .pdf-search-input {
+  width: 100%;
+  padding: 8px 32px 8px 12px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #2a2a2a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.project-symbols-page .pdf-search-input::placeholder {
+  color: #888;
+}
+
+.project-symbols-page .pdf-search-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.project-symbols-page .clear-pdf-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.project-symbols-page .clear-pdf-btn:hover {
+  color: #fff;
+}
+
+.project-symbols-page .pdf-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.project-symbols-page .pdf-dropdown-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-symbols-page .pdf-dropdown-item:hover {
+  background: #333;
+}
+
+.project-symbols-page .pdf-dropdown-item.selected {
+  background: #3498db33;
+}
+
+.project-symbols-page .pdf-item-name {
+  color: #fff;
+  font-size: 13px;
+}
+
+.project-symbols-page .pdf-item-folder {
+  color: #888;
+  font-size: 11px;
+}
+
+.project-symbols-page .pdf-dropdown-empty {
+  padding: 12px;
+  color: #888;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Extraction Workspace */
+.project-symbols-page .extraction-workspace {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+.project-symbols-page .pdf-viewer-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.project-symbols-page .pdf-viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 12px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.project-symbols-page .page-info {
+  color: #888;
+  font-size: 13px;
+}
+
+.project-symbols-page .page-nav {
+  display: flex;
+  gap: 4px;
+}
+
+.project-symbols-page .page-nav button,
+.project-symbols-page .zoom-controls button {
+  width: 28px;
+  height: 28px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.project-symbols-page .page-nav button:hover,
+.project-symbols-page .zoom-controls button:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.project-symbols-page .page-nav button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-symbols-page .zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.project-symbols-page .zoom-controls span {
+  color: #888;
+  font-size: 12px;
+  min-width: 45px;
+  text-align: center;
+}
+
+.project-symbols-page .pdf-canvas-container {
+  flex: 1;
+  overflow: auto;
+  background: #525659;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.project-symbols-page .canvas-wrapper {
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-symbols-page .pdf-canvas {
+  display: block;
+}
+
+.project-symbols-page .markup-overlay,
+.project-symbols-page .placement-overlay {
+  pointer-events: none;
+}
+
+.project-symbols-page .canvas-instructions {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Creation Panel */
+.project-symbols-page .creation-panel {
+  width: 280px;
+  background: #222;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.project-symbols-page .creation-panel h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.project-symbols-page .symbol-name-input,
+.project-symbols-page .symbol-category-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-symbols-page .symbol-name-input label,
+.project-symbols-page .symbol-category-input label {
+  color: #888;
+  font-size: 12px;
+}
+
+.project-symbols-page .symbol-name-input input,
+.project-symbols-page .symbol-category-input input {
+  padding: 8px 12px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.project-symbols-page .symbol-name-input input:focus,
+.project-symbols-page .symbol-category-input input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.project-symbols-page .markups-list {
+  flex: 1;
+  min-height: 0;
+}
+
+.project-symbols-page .markups-list h4 {
+  color: #888;
+  font-size: 12px;
+  margin: 0 0 8px;
+}
+
+.project-symbols-page .markup-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: #2a2a2a;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.project-symbols-page .markup-item:hover {
+  background: #333;
+}
+
+.project-symbols-page .markup-item.selected {
+  background: #3498db33;
+  border-left: 2px solid #3498db;
+}
+
+.project-symbols-page .markup-type {
+  color: #fff;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.project-symbols-page .delete-markup-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+}
+
+.project-symbols-page .delete-markup-btn:hover {
+  color: #e74c3c;
+}
+
+.project-symbols-page .no-markups {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  padding: 16px;
+}
+
+.project-symbols-page .extraction-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-symbols-page .extract-btn {
+  padding: 10px 16px;
+  background: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-symbols-page .extract-btn:hover {
+  background: #2980b9;
+}
+
+.project-symbols-page .extract-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-symbols-page .extracted-preview {
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+}
+
+.project-symbols-page .extracted-preview h4 {
+  color: #fff;
+  font-size: 12px;
+  margin: 0 0 8px;
+}
+
+.project-symbols-page .extracted-preview img {
+  max-width: 100%;
+  max-height: 120px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.project-symbols-page .extracted-svg-preview {
+  max-width: 100%;
+  max-height: 150px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-symbols-page .extracted-svg-preview svg {
+  max-width: 100%;
+  max-height: 130px;
+}
+
+.project-symbols-page .shape-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.project-symbols-page .shape-stat-badge {
+  background: #2ecc71;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.project-symbols-page .shape-stat-badge:nth-child(2) {
+  background: #3498db;
+  color: #fff;
+}
+
+.project-symbols-page .shape-stat-badge:nth-child(3) {
+  background: #9b59b6;
+  color: #fff;
+}
+
+.project-symbols-page .shape-stat-badge:nth-child(4) {
+  background: #e67e22;
+  color: #fff;
+}
+
+.project-symbols-page .shape-stat-badge:nth-child(5) {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.project-symbols-page .bitmap-preview-toggle {
+  margin-top: 8px;
+}
+
+.project-symbols-page .bitmap-preview-toggle summary {
+  cursor: pointer;
+  color: #888;
+  font-size: 11px;
+}
+
+.project-symbols-page .bitmap-preview-toggle summary:hover {
+  color: #fff;
+}
+
+.project-symbols-page .bitmap-preview {
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+.project-symbols-page .extracted-preview p {
+  color: #888;
+  font-size: 11px;
+  margin: 8px 0 0;
+}
+
+.project-symbols-page .creation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project-symbols-page .save-symbol-btn {
+  padding: 10px 16px;
+  background: #27ae60;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-symbols-page .save-symbol-btn:hover {
+  background: #219a52;
+}
+
+.project-symbols-page .clear-btn {
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.project-symbols-page .clear-btn:hover {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+/* No PDF Selected */
+.project-symbols-page .no-pdf-selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #666;
+}
+
+.project-symbols-page .no-pdf-selected .empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .no-pdf-selected p {
+  font-size: 14px;
+}
+
+/* Test Symbol View */
+.project-symbols-page .test-symbol-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-symbols-page .test-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.project-symbols-page .test-page-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+}
+
+.project-symbols-page .back-to-symbol-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project-symbols-page .back-to-symbol-btn:hover {
+  background: #444;
+}
+
+.project-symbols-page .test-workspace {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Placement Panel */
+.project-symbols-page .placement-panel {
+  width: 260px;
+  background: #222;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.project-symbols-page .placement-panel h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+}
+
+.project-symbols-page .placement-symbol-preview {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.project-symbols-page .preview-svg,
+.project-symbols-page .preview-img {
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.project-symbols-page .preview-svg svg {
+  width: 80px;
+  height: 80px;
+}
+
+.project-symbols-page .preview-placeholder {
+  color: #666;
+  font-size: 12px;
+}
+
+.project-symbols-page .setting-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-symbols-page .setting-row label {
+  color: #888;
+  font-size: 12px;
+  min-width: 60px;
+}
+
+.project-symbols-page .setting-row input[type="range"] {
+  flex: 1;
+  cursor: pointer;
+}
+
+.project-symbols-page .setting-value {
+  color: #fff;
+  font-size: 12px;
+  min-width: 45px;
+  text-align: right;
+}
+
+.project-symbols-page .color-row input[type="color"] {
+  width: 32px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.project-symbols-page .color-row input[type="color"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-symbols-page .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #888;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.project-symbols-page .checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.project-symbols-page .color-presets-row {
+  flex-wrap: wrap;
+}
+
+.project-symbols-page .color-presets-row label {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.project-symbols-page .color-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.project-symbols-page .color-preset-btn {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s, border-color 0.15s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #888;
+}
+
+.project-symbols-page .color-preset-btn:hover {
+  transform: scale(1.1);
+  border-color: #666;
+}
+
+.project-symbols-page .color-preset-btn.active {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.5);
+}
+
+.project-symbols-page .color-preset-btn.original {
+  background: linear-gradient(135deg, #666 25%, #444 25%, #444 50%, #666 50%, #666 75%, #444 75%);
+  background-size: 8px 8px;
+}
+
+.project-symbols-page .placement-mode-toggle {
+  margin-top: 8px;
+}
+
+.project-symbols-page .mode-btn {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #333;
+  color: #fff;
+}
+
+.project-symbols-page .mode-btn:hover {
+  background: #444;
+}
+
+.project-symbols-page .mode-btn.active {
+  background: #27ae60;
+  border-color: #27ae60;
+  color: #fff;
+}
+
+.project-symbols-page .placed-count {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  padding: 8px;
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.project-symbols-page .export-markups-btn {
+  padding: 10px 16px;
+  background: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.project-symbols-page .export-markups-btn:hover {
+  background: #2980b9;
+}
+
+.project-symbols-page .clear-all-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project-symbols-page .clear-all-btn:hover {
+  background: #c0392b;
+}
+
+/* Editable Markups Section */
+.project-symbols-page .editable-markups-section {
+  background: #1a1a1a;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 8px;
+}
+
+.project-symbols-page .editable-markups-section h4 {
+  color: #fff;
+  font-size: 13px;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.project-symbols-page .selected-markup-props {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: #252525;
+  border-radius: 6px;
+  border: 1px solid #3498db;
+}
+
+.project-symbols-page .selected-markup-props .prop-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-symbols-page .selected-markup-props .prop-row label {
+  color: #888;
+  font-size: 11px;
+  min-width: 50px;
+}
+
+.project-symbols-page .selected-markup-props .prop-row .prop-value {
+  color: #fff;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.project-symbols-page .selected-markup-props .prop-row input[type="color"] {
+  width: 28px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.project-symbols-page .selected-markup-props .prop-row input[type="range"] {
+  flex: 1;
+  cursor: pointer;
+}
+
+.project-symbols-page .selected-markup-props .prop-row span {
+  color: #fff;
+  font-size: 11px;
+  min-width: 30px;
+}
+
+.project-symbols-page .selected-markup-props .delete-markup-btn {
+  margin-top: 6px;
+  padding: 8px 12px;
+  background: #e74c3c;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.project-symbols-page .selected-markup-props .delete-markup-btn:hover {
+  background: #c0392b;
+}
+
+.project-symbols-page .no-markups-hint {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+}
+
+.project-symbols-page .legacy-symbols-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #333;
+}
+
+.project-symbols-page .legacy-symbols-section h4 {
+  color: #888;
+  font-size: 12px;
+  margin: 0 0 8px;
+}
+
+/* Selection handles styling */
+.project-symbols-page .selection-handles rect[data-handle] {
+  transition: fill 0.15s;
+}
+
+.project-symbols-page .selection-handles rect[data-handle]:hover {
+  fill: #3498db;
+}
+
+/* Symbol Details */
+.project-symbols-page .symbol-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-symbols-page .symbol-details h2 {
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.project-symbols-page .symbol-category-badge {
+  display: inline-block;
+  background: #333;
+  color: #888;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+.project-symbols-page .symbol-detail-preview {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  min-height: 200px;
+}
+
+.project-symbols-page .symbol-detail-svg {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-symbols-page .symbol-detail-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.project-symbols-page .symbol-detail-img {
+  max-width: 200px;
+  max-height: 200px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.project-symbols-page .symbol-placeholder {
+  color: #666;
+}
+
+.project-symbols-page .symbol-detail-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.project-symbols-page .detail-stat {
+  display: flex;
+  gap: 8px;
+}
+
+.project-symbols-page .detail-stat .stat-label {
+  color: #888;
+  font-size: 13px;
+}
+
+.project-symbols-page .detail-stat .stat-value {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-symbols-page .symbol-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.project-symbols-page .test-symbol-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project-symbols-page .test-symbol-btn:hover {
+  background: #2980b9;
+}
+
+.project-symbols-page .delete-symbol-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project-symbols-page .delete-symbol-btn:hover {
+  background: #c0392b;
+}
+
+/* Placed Symbol */
+.project-symbols-page .placed-symbol {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.project-symbols-page .placed-symbol:hover {
+  opacity: 0.7;
+}
+
+/* Scrollbar */
+.project-symbols-page .symbols-list::-webkit-scrollbar,
+.project-symbols-page .creation-panel::-webkit-scrollbar,
+.project-symbols-page .placement-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-symbols-page .symbols-list::-webkit-scrollbar-track,
+.project-symbols-page .creation-panel::-webkit-scrollbar-track,
+.project-symbols-page .placement-panel::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.project-symbols-page .symbols-list::-webkit-scrollbar-thumb,
+.project-symbols-page .creation-panel::-webkit-scrollbar-thumb,
+.project-symbols-page .placement-panel::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.project-symbols-page .symbols-list::-webkit-scrollbar-thumb:hover,
+.project-symbols-page .creation-panel::-webkit-scrollbar-thumb:hover,
+.project-symbols-page .placement-panel::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Loading */
+.project-symbols-page .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* ===========================================
+   CLEANUP EDITOR MODAL
+   =========================================== */
+
+.project-symbols-page .cleanup-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.project-symbols-page .cleanup-modal {
+  background: #1e1e1e;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+
+.project-symbols-page .cleanup-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.project-symbols-page .cleanup-modal-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.project-symbols-page .close-modal-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.project-symbols-page .close-modal-btn:hover {
+  color: #fff;
+}
+
+.project-symbols-page .cleanup-modal-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+}
+
+.project-symbols-page .cleanup-modal .cleanup-canvas-container {
+  flex: 1;
+  background: #fff;
+  border: 2px solid #444;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  min-height: 400px;
+  background-image: 
+    linear-gradient(45deg, #ddd 25%, transparent 25%),
+    linear-gradient(-45deg, #ddd 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ddd 75%),
+    linear-gradient(-45deg, transparent 75%, #ddd 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.project-symbols-page .cleanup-modal .cleanup-canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.project-symbols-page .cleanup-tools-panel {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.project-symbols-page .tool-section {
+  background: #252525;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.project-symbols-page .tool-section label {
+  display: block;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.project-symbols-page .symbol-name-input {
+  width: 100%;
+  padding: 8px 10px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.project-symbols-page .symbol-name-input:focus {
+  outline: none;
+  border-color: #2ecc71;
+}
+
+.project-symbols-page .tool-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.project-symbols-page .tool-btn {
+  flex: 1;
+  padding: 10px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.project-symbols-page .tool-btn:hover {
+  background: #444;
+  color: #fff;
+}
+
+.project-symbols-page .tool-btn.active {
+  background: #2ecc71;
+  border-color: #27ae60;
+  color: #000;
+}
+
+.project-symbols-page .tool-section input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  margin-top: 4px;
+}
+
+.project-symbols-page .tool-section input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #2ecc71;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.project-symbols-page .cleanup-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.project-symbols-page .cleanup-actions-grid button {
+  padding: 8px 6px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.project-symbols-page .cleanup-actions-grid button:hover {
+  background: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+.project-symbols-page .recolor-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.project-symbols-page .color-picker-large {
+  width: 50px;
+  height: 36px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.project-symbols-page .apply-color-btn {
+  flex: 1;
+  padding: 8px;
+  background: #444;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.project-symbols-page .apply-color-btn:hover {
+  background: #555;
+}
+
+.project-symbols-page .preset-colors-large {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.project-symbols-page .preset-color-large {
+  width: 100%;
+  height: 28px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s, border-color 0.1s;
+}
+
+.project-symbols-page .preset-color-large:hover {
+  transform: scale(1.05);
+  border-color: #fff;
+}
+
+.project-symbols-page .cleanup-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #333;
+}
+
+.project-symbols-page .cleanup-modal-footer .cancel-btn {
+  padding: 10px 20px;
+  background: #444;
+  border: none;
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.project-symbols-page .cleanup-modal-footer .cancel-btn:hover {
+  background: #555;
+  color: #fff;
+}
+
+.project-symbols-page .cleanup-modal-footer .save-symbol-btn {
+  padding: 10px 24px;
+  background: #27ae60;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.project-symbols-page .cleanup-modal-footer .save-symbol-btn:hover {
+  background: #2ecc71;
+}
+
+/* ===========================================
+   CLEANUP EDITOR STYLES (inline - keep for reference)
+   =========================================== */
+
+.project-symbols-page .cleanup-editor {
+  background: #252525;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.project-symbols-page .cleanup-editor h4 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.project-symbols-page .cleanup-canvas-container {
+  background: #fff;
+  border: 2px solid #444;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.project-symbols-page .cleanup-canvas {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  background-image: 
+    linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+}
+
+.project-symbols-page .cleanup-tools {
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .cleanup-tools .tool-group {
+  margin-bottom: 10px;
+}
+
+.project-symbols-page .cleanup-tools .tool-group label {
+  display: block;
+  color: #aaa;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.project-symbols-page .cleanup-tools .tool-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.project-symbols-page .cleanup-tools .tool-btn {
+  padding: 6px 10px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.project-symbols-page .cleanup-tools .tool-btn:hover {
+  background: #444;
+  color: #fff;
+}
+
+.project-symbols-page .cleanup-tools .tool-btn.active {
+  background: #2ecc71;
+  border-color: #27ae60;
+  color: #000;
+}
+
+.project-symbols-page .cleanup-tools input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.project-symbols-page .cleanup-tools input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #2ecc71;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.project-symbols-page .cleanup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.project-symbols-page .cleanup-actions button {
+  padding: 6px 10px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.project-symbols-page .cleanup-actions button:hover {
+  background: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+.project-symbols-page .cleanup-recolor {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #333;
+  border-radius: 6px;
+}
+
+.project-symbols-page .cleanup-recolor label {
+  display: block;
+  color: #aaa;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+.project-symbols-page .recolor-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-symbols-page .recolor-controls .color-picker {
+  width: 36px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.project-symbols-page .recolor-controls button {
+  padding: 6px 10px;
+  background: #444;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.project-symbols-page .recolor-controls button:hover {
+  background: #555;
+  color: #fff;
+}
+
+.project-symbols-page .preset-colors {
+  display: flex;
+  gap: 4px;
+}
+
+.project-symbols-page .preset-color {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s, border-color 0.1s;
+}
+
+.project-symbols-page .preset-color:hover {
+  transform: scale(1.15);
+  border-color: #fff;
+}
+
+.project-symbols-page .cleanup-save-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project-symbols-page .cleanup-save-actions .save-symbol-btn {
+  flex: 1;
+  padding: 10px;
+  background: #27ae60;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.project-symbols-page .cleanup-save-actions .save-symbol-btn:hover {
+  background: #2ecc71;
+}
+
+.project-symbols-page .cleanup-save-actions .cancel-btn {
+  padding: 10px 16px;
+  background: #444;
+  border: none;
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.project-symbols-page .cleanup-save-actions .cancel-btn:hover {
+  background: #555;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .project-symbols-page .extraction-workspace,
+  .project-symbols-page .test-workspace {
+    flex-direction: column;
+  }
+  
+  .project-symbols-page .creation-panel,
+  .project-symbols-page .placement-panel {
+    width: 100%;
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "pdf-viewer-dev",
+  "version": "1.0.0",
+  "description": "Development launcher for PDF viewer",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

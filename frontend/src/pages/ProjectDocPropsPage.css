@@ -1,0 +1,2335 @@
+/* Document Properties Page Styles - All scoped to .project-docprops-page */
+.project-docprops-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.project-docprops-page .docprops-header {
+  background: #000000;
+  border-bottom: 1px solid #333;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-header .back-btn {
+  background: none;
+  border: 1px solid #555;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: all 0.2s;
+}
+
+.project-docprops-page .docprops-header .back-btn:hover {
+  background: #333;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.project-docprops-page .docprops-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.project-docprops-page .docprops-header .brand-title {
+  margin-left: auto;
+  color: #ffffff;
+}
+
+/* Loading State - scoped */
+.project-docprops-page .docprops-loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+  color: #666;
+}
+
+.project-docprops-page .docprops-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: docprops-spin 1s linear infinite;
+}
+
+@keyframes docprops-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Body Layout */
+.project-docprops-page .docprops-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.project-docprops-page .docprops-sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  border-right: 1px solid #333;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-sidebar-resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  cursor: col-resize;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.project-docprops-page .docprops-sidebar-resize-handle:hover {
+  background: #3498db;
+}
+
+/* Sidebar Items */
+.project-docprops-page .docprops-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin: 4px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #ccc;
+}
+
+.project-docprops-page .docprops-sidebar-item:hover {
+  background: #252525;
+}
+
+.project-docprops-page .docprops-sidebar-item.selected {
+  background: #2a2a2a;
+}
+
+.project-docprops-page .docprops-sidebar-item.home-item {
+  margin: 8px 12px 4px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+}
+
+.project-docprops-page .docprops-sidebar-item.home-item:hover {
+  background: #252525;
+}
+
+.project-docprops-page .docprops-sidebar-item.home-item.selected {
+  background: #2a2a2a;
+}
+
+.project-docprops-page .docprops-sidebar-item .item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.project-docprops-page .docprops-sidebar-divider {
+  height: 1px;
+  background: #333;
+  margin: 8px 16px;
+}
+
+/* Nav Buttons (Document Properties, Detection Settings) */
+.project-docprops-page .docprops-nav-btn {
+  margin: 4px 12px;
+  padding: 10px 16px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  outline: none;
+  text-align: left;
+}
+
+.project-docprops-page .docprops-nav-btn:hover {
+  background: #252525;
+}
+
+.project-docprops-page .docprops-nav-btn:focus {
+  outline: none;
+}
+
+/* Search */
+.project-docprops-page .docprops-search {
+  padding: 0 12px 12px;
+}
+
+.project-docprops-page .docprops-search input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.project-docprops-page .docprops-search input::placeholder {
+  color: #888;
+}
+
+.project-docprops-page .docprops-search input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+/* Templates Section */
+.project-docprops-page .docprops-templates-section {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: 100px;
+  overflow: hidden;
+  padding: 8px 0;
+  background: #1e1e1e;
+}
+
+.project-docprops-page .docprops-templates-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-templates-section-header .section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-docprops-page .docprops-template-count {
+  font-size: 11px;
+  color: #888;
+  background: #333;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.project-docprops-page .docprops-templates-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px 8px;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2a2a2a;
+  background: #1e1e1e;
+}
+
+.project-docprops-page .docprops-templates-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-docprops-page .docprops-templates-list::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+.project-docprops-page .docprops-templates-list::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.project-docprops-page .docprops-no-templates {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  padding: 20px;
+}
+
+/* Template List Item */
+.project-docprops-page .docprops-template-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin: 2px 0;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  outline: none;
+}
+
+.project-docprops-page .docprops-template-list-item:hover {
+  background: #252525;
+}
+
+.project-docprops-page .docprops-template-list-item.selected {
+  background: #2a2a2a;
+  border-left: 3px solid #3498db;
+}
+
+.project-docprops-page .docprops-template-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-docprops-page .docprops-template-item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-docprops-page .docprops-template-item-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-docprops-page .docprops-issue-badge {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.project-docprops-page .docprops-template-item-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.project-docprops-page .docprops-template-list-item:hover .docprops-template-item-actions {
+  opacity: 1;
+}
+
+.project-docprops-page .docprops-template-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.15s;
+}
+
+.project-docprops-page .docprops-template-action-btn:hover {
+  background: #333;
+  color: #aaa;
+}
+
+.project-docprops-page .docprops-template-action-btn.delete:hover {
+  background: #3a2525;
+  color: #e74c3c;
+}
+
+/* Section Resize Handle */
+.project-docprops-page .docprops-section-resize-handle {
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ns-resize;
+  background: #1e1e1e;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-section-resize-handle:hover,
+.project-docprops-page .docprops-section-resize-handle.active {
+  background: #2a2a2a;
+}
+
+.project-docprops-page .docprops-resize-handle-bar {
+  width: 40px;
+  height: 3px;
+  background: #444;
+  border-radius: 2px;
+}
+
+.project-docprops-page .docprops-section-resize-handle:hover .docprops-resize-handle-bar,
+.project-docprops-page .docprops-section-resize-handle.active .docprops-resize-handle-bar {
+  background: #3498db;
+}
+
+/* Folders Section */
+.project-docprops-page .docprops-folders-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px 0;
+  background: #1e1e1e;
+}
+
+.project-docprops-page .docprops-folders-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-folders-section-header .section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-docprops-page .docprops-folder-count {
+  font-size: 11px;
+  color: #888;
+  background: #333;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.project-docprops-page .docprops-folders-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 4px 8px;
+  min-height: 0;
+  background: #1e1e1e;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2a2a2a;
+}
+
+.project-docprops-page .docprops-no-folders {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 20px;
+}
+
+.project-docprops-page .docprops-folder-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin: 2px 0;
+  background: transparent;
+  border-radius: 6px;
+}
+
+.project-docprops-page .docprops-folder-item-icon {
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-folder-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-docprops-page .docprops-folder-item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-docprops-page .docprops-folder-item-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+}
+
+/* Main Content */
+.project-docprops-page .docprops-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+/* Home Content */
+.project-docprops-page .docprops-home-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-docprops-page .home-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.project-docprops-page .home-icon {
+  margin-bottom: 12px;
+}
+
+.project-docprops-page .home-header-section h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-docprops-page .home-subtitle {
+  color: #888;
+  font-size: 16px;
+  margin: 0 0 32px;
+}
+
+/* Stats Row */
+.project-docprops-page .home-stats-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.project-docprops-page .stat-card {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px 32px;
+  text-align: center;
+}
+
+.project-docprops-page .stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.project-docprops-page .stat-label {
+  font-size: 14px;
+  color: #888;
+  font-weight: 600;
+}
+
+/* Actions Row */
+.project-docprops-page .home-actions-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-docprops-page .action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.project-docprops-page .action-btn:hover {
+  background: #444;
+  border-color: #555;
+  color: #fff;
+}
+
+.project-docprops-page .action-btn svg {
+  opacity: 0.7;
+}
+
+.project-docprops-page .action-btn:hover svg {
+  opacity: 1;
+}
+
+/* Legacy styles kept for other sections */
+.project-docprops-page .docprops-home-content-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.project-docprops-page .docprops-home-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-docprops-page .docprops-home-icon {
+  margin-bottom: 12px;
+}
+
+.project-docprops-page .docprops-home-content h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-docprops-page .docprops-home-subtitle {
+  color: #888;
+  font-size: 16px;
+  margin: 0 0 32px;
+}
+
+/* Stats Row (legacy) */
+.project-docprops-page .docprops-home-stats-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-docprops-page .docprops-stat-card {
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 24px 32px;
+  text-align: center;
+  min-width: 140px;
+}
+
+.project-docprops-page .docprops-stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 4px;
+}
+
+.project-docprops-page .docprops-stat-label {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Actions Section (legacy) */
+.project-docprops-page .docprops-home-actions-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.project-docprops-page .docprops-home-actions-section h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.project-docprops-page .docprops-home-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.project-docprops-page .docprops-action-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project-docprops-page .docprops-action-card:hover {
+  border-color: #3498db;
+  background: #3a3a3a;
+}
+
+.project-docprops-page .docprops-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-action-text {
+  flex: 1;
+}
+
+.project-docprops-page .docprops-action-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.project-docprops-page .docprops-action-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Info Section */
+.project-docprops-page .docprops-info-section {
+  width: 100%;
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.project-docprops-page .docprops-info-section h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-docprops-page .docprops-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-docprops-page .docprops-info-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-docprops-page .docprops-step-number {
+  width: 28px;
+  height: 28px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-docprops-page .docprops-step-text strong {
+  color: #333;
+  font-size: 14px;
+}
+
+.project-docprops-page .docprops-step-text span {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Template Detail */
+.project-docprops-page .docprops-template-detail {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  background: #f8f9fa;
+}
+
+.project-docprops-page .docprops-template-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.project-docprops-page .docprops-template-header-left h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+}
+
+.project-docprops-page .docprops-template-meta {
+  font-size: 13px;
+  color: #888;
+}
+
+.project-docprops-page .docprops-template-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.project-docprops-page .docprops-model-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.project-docprops-page .docprops-model-badge.trained {
+  background: #e6f7ed;
+  color: #27ae60;
+}
+
+.project-docprops-page .docprops-model-badge.no-model {
+  background: #f0f0f0;
+  color: #888;
+}
+
+.project-docprops-page .docprops-template-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Test Results Panel */
+.project-docprops-page .docprops-test-results {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.project-docprops-page .docprops-test-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.project-docprops-page .docprops-test-results-header h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-docprops-page .docprops-close-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #666;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-docprops-page .docprops-close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.project-docprops-page .docprops-test-source {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 16px;
+}
+
+.project-docprops-page .docprops-test-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-docprops-page .docprops-test-property {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.project-docprops-page .docprops-test-property-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 13px;
+}
+
+.project-docprops-page .docprops-test-property-value {
+  font-size: 14px;
+  color: #222;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.project-docprops-page .docprops-test-property-value .empty {
+  color: #999;
+  font-style: italic;
+}
+
+.project-docprops-page .docprops-test-error {
+  padding: 16px;
+  background: #fde8e8;
+  border-radius: 8px;
+  color: #c0392b;
+  font-size: 14px;
+}
+
+/* Detection info badges */
+.project-docprops-page .docprops-detection-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-docprops-page .docprops-detection-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.project-docprops-page .docprops-detection-badge.success {
+  background: #e6f7ed;
+  color: #27ae60;
+}
+
+.project-docprops-page .docprops-detection-badge.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.project-docprops-page .docprops-detection-badge.error {
+  background: #fde8e8;
+  color: #c0392b;
+}
+
+.project-docprops-page .docprops-detection-details {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Preview Section */
+.project-docprops-page .docprops-template-preview-section {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 1200px) {
+  .project-docprops-page .docprops-template-preview-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-docprops-page .docprops-preview-card,
+.project-docprops-page .docprops-properties-card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.project-docprops-page .docprops-preview-card h3,
+.project-docprops-page .docprops-properties-card h3 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Template Preview Component */
+.project-docprops-page .docprops-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  border-radius: 8px;
+  padding: 24px;
+  min-height: 180px;
+}
+
+.project-docprops-page .docprops-preview-canvas-wrapper {
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.project-docprops-page .docprops-preview-canvas-wrapper canvas {
+  display: block;
+  border-radius: 4px;
+}
+
+.project-docprops-page .docprops-preview-image {
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-docprops-page .docprops-preview-region {
+  position: absolute;
+  border: 2px solid;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.project-docprops-page .docprops-preview-region-label {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  font-size: 9px;
+  font-weight: 600;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px 0 3px 0;
+  white-space: nowrap;
+}
+
+.project-docprops-page .docprops-preview-loading,
+.project-docprops-page .docprops-preview-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  color: #888;
+  font-size: 13px;
+}
+
+/* Properties List */
+.project-docprops-page .docprops-properties-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-docprops-page .docprops-property-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.project-docprops-page .docprops-property-name {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.project-docprops-page .docprops-property-type {
+  font-size: 11px;
+  color: #666;
+  background: #e8e8e8;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.project-docprops-page .docprops-empty-text {
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Documents Section */
+.project-docprops-page .docprops-documents-section {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-docprops-page .docprops-documents-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.project-docprops-page .docprops-documents-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-docprops-page .docprops-documents-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.project-docprops-page .docprops-documents-empty p {
+  margin: 16px 0 4px;
+  font-weight: 500;
+  color: #666;
+}
+
+.project-docprops-page .docprops-documents-empty span {
+  font-size: 13px;
+  color: #999;
+}
+
+/* Documents Table */
+.project-docprops-page .docprops-documents-table {
+  overflow-x: auto;
+}
+
+.project-docprops-page .docprops-table-header {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e1e4e8;
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.project-docprops-page .docprops-table-header .docprops-table-cell {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-docprops-page .docprops-table-header .docprops-table-cell.prop-value {
+  color: #555;
+}
+
+.project-docprops-page .docprops-table-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.project-docprops-page .docprops-table-row {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.1s;
+}
+
+.project-docprops-page .docprops-table-row:hover {
+  background: #fafbfc;
+}
+
+.project-docprops-page .docprops-table-row.has-issue {
+  background: #fffbf0;
+}
+
+.project-docprops-page .docprops-table-row:last-child {
+  border-bottom: none;
+}
+
+.project-docprops-page .docprops-table-cell {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.project-docprops-page .docprops-table-cell.doc-name {
+  min-width: 220px;
+  max-width: 300px;
+  flex: 1.5;
+  font-weight: 500;
+}
+
+.project-docprops-page .docprops-table-cell.doc-name span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-docprops-page .docprops-table-cell.prop-value {
+  min-width: 100px;
+  max-width: 200px;
+  flex: 1;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-docprops-page .docprops-table-cell.status {
+  width: 90px;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.project-docprops-page .docprops-empty-value {
+  color: #ccc;
+}
+
+.project-docprops-page .docprops-status-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.project-docprops-page .docprops-status-badge.success {
+  background: #e6f7ed;
+  color: #1a7f4b;
+}
+
+.project-docprops-page .docprops-status-badge.error {
+  background: #fde8e8;
+  color: #c53030;
+}
+
+.project-docprops-page .docprops-status-badge.pending {
+  background: #f0f0f0;
+  color: #888;
+}
+
+.project-docprops-page .docprops-color-dot.small {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+/* No Selection */
+.project-docprops-page .docprops-no-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+}
+
+/* Color dot */
+.project-docprops-page .docprops-color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-color-dot.large {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+}
+
+
+/* ============================================
+   WIZARD MODAL STYLES
+   ============================================ */
+
+.project-docprops-page .docprops-wizard-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.project-docprops-page .docprops-wizard-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 580px;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-docprops-page .docprops-wizard-modal.large {
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  max-width: 2000px;
+  max-height: none;
+}
+
+.project-docprops-page .docprops-wizard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e1e4e8;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-wizard-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.project-docprops-page .docprops-wizard-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.project-docprops-page .docprops-wizard-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Wizard Body */
+.project-docprops-page .docprops-wizard-body {
+  padding: 24px 28px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.project-docprops-page .docprops-wizard-body-full {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Form Group */
+.project-docprops-page .docprops-form-group {
+  margin-bottom: 24px;
+}
+
+.project-docprops-page .docprops-form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.project-docprops-page .docprops-form-group input[type="text"],
+.project-docprops-page .docprops-form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.project-docprops-page .docprops-form-group input:focus,
+.project-docprops-page .docprops-form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.project-docprops-page .docprops-hint {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.project-docprops-page .docprops-pdf-search {
+  margin-bottom: 12px;
+}
+
+/* PDF List - Step 1 */
+.project-docprops-page .docprops-pdf-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.project-docprops-page .docprops-pdf-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  background: white;
+  transition: all 0.1s;
+}
+
+.project-docprops-page .docprops-pdf-item:last-child {
+  border-bottom: none;
+}
+
+.project-docprops-page .docprops-pdf-item:hover {
+  background: #f5f8fa;
+}
+
+.project-docprops-page .docprops-pdf-item.selected {
+  background: #e8f4fc;
+  border-left: 3px solid #3498db;
+}
+
+.project-docprops-page .docprops-pdf-item-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-docprops-page .docprops-pdf-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-docprops-page .docprops-pdf-folder {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.project-docprops-page .docprops-pdf-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Wizard Footer */
+.project-docprops-page .docprops-wizard-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 20px;
+  margin-top: 8px;
+  border-top: 1px solid #e1e4e8;
+}
+
+/* Buttons */
+.project-docprops-page .docprops-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+.project-docprops-page .docprops-btn.primary {
+  background: #3498db;
+  color: white;
+}
+
+.project-docprops-page .docprops-btn.primary:hover {
+  background: #2980b9;
+}
+
+.project-docprops-page .docprops-btn.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-docprops-page .docprops-btn.secondary {
+  background: #f5f5f5;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+.project-docprops-page .docprops-btn.secondary:hover {
+  background: #e8e8e8;
+  border-color: #ccc;
+}
+
+.project-docprops-page .docprops-btn.small {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.project-docprops-page .docprops-btn.full {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* Draw Sidebar */
+.project-docprops-page .docprops-draw-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background: white;
+  border-right: 1px solid #e1e4e8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+.project-docprops-page .docprops-instruction-box {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 12px 0 16px;
+}
+
+.project-docprops-page .docprops-instruction-box.highlight {
+  background: #fff8e6;
+  border: 2px solid #f0c36d;
+}
+
+.project-docprops-page .docprops-instruction-box h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.project-docprops-page .docprops-instruction-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Success Box */
+.project-docprops-page .docprops-success-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 8px;
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #22543d;
+}
+
+.project-docprops-page .docprops-success-box button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.project-docprops-page .docprops-success-box button:hover {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+/* Tips */
+.project-docprops-page .docprops-tips {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #666;
+}
+
+.project-docprops-page .docprops-tips p {
+  margin: 0 0 8px;
+}
+
+.project-docprops-page .docprops-tips ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.project-docprops-page .docprops-tips li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-docprops-page .docprops-tips kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-family: monospace;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Mode Section */
+.project-docprops-page .docprops-mode-section {
+  margin: 12px 0;
+}
+
+.project-docprops-page .docprops-mode-section label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.project-docprops-page .docprops-mode-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.project-docprops-page .docprops-mode-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 6px;
+  background: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.15s;
+}
+
+.project-docprops-page .docprops-mode-btn:hover {
+  background: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+.project-docprops-page .docprops-mode-btn.active {
+  background: #e8f4fc;
+  border-color: #3498db;
+  color: #2980b9;
+}
+
+.project-docprops-page .docprops-mode-btn span {
+  font-size: 10px;
+  color: #aaa;
+  background: #e8e8e8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.project-docprops-page .docprops-mode-btn.active span {
+  background: #d0e8f7;
+  color: #2980b9;
+}
+
+/* Tips */
+.project-docprops-page .docprops-tips {
+  font-size: 12px;
+  color: #888;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.project-docprops-page .docprops-tips ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.project-docprops-page .docprops-tips li {
+  margin: 4px 0;
+}
+
+/* PDF Viewer */
+.project-docprops-page .docprops-pdf-viewer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #2c3e50;
+  overflow: hidden;
+}
+
+.project-docprops-page .docprops-pdf-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #34495e;
+  flex-shrink: 0;
+}
+
+.project-docprops-page .docprops-pdf-toolbar button {
+  padding: 6px 12px;
+  background: #4a6278;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.project-docprops-page .docprops-pdf-toolbar button:hover:not(:disabled) {
+  background: #5a7288;
+}
+
+.project-docprops-page .docprops-pdf-toolbar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-docprops-page .docprops-pdf-toolbar span {
+  color: white;
+  font-size: 13px;
+}
+
+.project-docprops-page .docprops-toolbar-sep {
+  opacity: 0.3;
+}
+
+.project-docprops-page .docprops-pdf-canvas-area {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Drawn Regions */
+.project-docprops-page .docprops-drawn-region {
+  position: absolute;
+  border: 2px solid;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.project-docprops-page .docprops-drawn-region.outer {
+  border-color: #e67e22;
+  background: rgba(230, 126, 34, 0.15);
+  border-style: dashed;
+}
+
+.project-docprops-page .docprops-drawn-region.outer.faded {
+  opacity: 0.4;
+}
+
+.project-docprops-page .docprops-drawn-region.prop {
+  border-width: 2px;
+}
+
+.project-docprops-page .docprops-drawn-region.prop.active {
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.project-docprops-page .docprops-region-label {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  padding: 2px 8px;
+  background: #e67e22;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.project-docprops-page .docprops-drawing-rect {
+  position: absolute;
+  border: 2px dashed;
+  pointer-events: none;
+  box-sizing: border-box;
+  background: rgba(230, 126, 34, 0.2);
+}
+
+/* Properties Form - Step 3 */
+.project-docprops-page .docprops-props-list {
+  margin-bottom: 16px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.project-docprops-page .docprops-prop-row {
+  display: grid;
+  grid-template-columns: 20px 1fr 110px 38px;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+}
+
+.project-docprops-page .docprops-prop-row .docprops-color-dot {
+  justify-self: center;
+}
+
+.project-docprops-page .docprops-prop-row input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.project-docprops-page .docprops-prop-row input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.project-docprops-page .docprops-prop-row input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.project-docprops-page .docprops-prop-row select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.project-docprops-page .docprops-props-empty {
+  padding: 32px 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border: 2px dashed #e1e4e8;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.project-docprops-page .docprops-props-empty p {
+  margin: 0 0 4px;
+  font-weight: 500;
+  color: #666;
+}
+
+.project-docprops-page .docprops-props-empty span {
+  font-size: 13px;
+  color: #999;
+}
+
+.project-docprops-page .docprops-remove-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e1e4e8;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  padding: 0;
+}
+
+.project-docprops-page .docprops-remove-btn:hover {
+  background: #fee;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.project-docprops-page .docprops-add-btn {
+  padding: 14px 20px;
+  background: white;
+  border: 2px dashed #d0d0d0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  width: 100%;
+  transition: all 0.15s;
+}
+
+.project-docprops-page .docprops-add-btn:hover {
+  background: #f0f7ff;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+/* Progress Section */
+.project-docprops-page .docprops-progress-section {
+  margin: 8px 0 12px;
+  padding: 14px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+.project-docprops-page .docprops-progress-bar {
+  height: 8px;
+  background: #e1e4e8;
+  border-radius: 4px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.project-docprops-page .docprops-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Props Navigation - Step 4 */
+.project-docprops-page .docprops-props-nav {
+  flex: 1;
+  overflow-y: auto;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-docprops-page .docprops-prop-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.15s;
+  background: white;
+}
+
+.project-docprops-page .docprops-prop-nav-item:hover {
+  background: #f8f9fa;
+  border-color: #d0d0d0;
+}
+
+.project-docprops-page .docprops-prop-nav-item.active {
+  background: #e8f4fc;
+  border-color: #3498db;
+  border-width: 2px;
+}
+
+.project-docprops-page .docprops-prop-nav-item.done {
+  border-color: #9ae6b4;
+  background: #f0fff4;
+}
+
+.project-docprops-page .docprops-prop-nav-item span {
+  flex: 1;
+}
+
+.project-docprops-page .docprops-prop-nav-item svg {
+  flex-shrink: 0;
+}
+
+/* Current Property */
+.project-docprops-page .docprops-current-prop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.project-docprops-page .docprops-current-prop h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ============================================
+   Extraction Dialog Modal
+   ============================================ */
+
+.project-docprops-page .docprops-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.project-docprops-page .docprops-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-docprops-page .docprops-extraction-modal {
+  width: 560px;
+}
+
+.project-docprops-page .docprops-modal-header {
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-docprops-page .docprops-modal-header h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.project-docprops-page .docprops-modal-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.project-docprops-page .docprops-extraction-settings {
+  padding: 20px 28px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.project-docprops-page .docprops-setting-group {
+  margin-bottom: 20px;
+}
+
+.project-docprops-page .docprops-setting-group > label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.project-docprops-page .docprops-setting-group select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.project-docprops-page .docprops-setting-group select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.project-docprops-page .docprops-setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.project-docprops-page .docprops-setting-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-docprops-page .docprops-setting-group input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #3498db;
+}
+
+.project-docprops-page .docprops-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.project-docprops-page .docprops-checkbox-label input {
+  cursor: pointer;
+}
+
+.project-docprops-page .docprops-setting-help {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+}
+
+.project-docprops-page .docprops-format-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-docprops-page .docprops-format-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-docprops-page .docprops-format-name {
+  font-size: 13px;
+  color: #555;
+  min-width: 100px;
+}
+
+.project-docprops-page .docprops-format-input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-family: monospace;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.project-docprops-page .docprops-format-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.project-docprops-page .docprops-extraction-progress {
+  padding: 16px 28px;
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+.project-docprops-page .docprops-progress-bar-container {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.project-docprops-page .docprops-progress-bar-fill {
+  height: 100%;
+  background: #3498db;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.project-docprops-page .docprops-progress-text {
+  font-size: 12px;
+  color: #666;
+}
+
+.project-docprops-page .docprops-modal-actions {
+  padding: 16px 28px 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+}
+
+/* Extraction Results */
+.project-docprops-page .docprops-extraction-results {
+  padding: 20px 28px;
+}
+
+.project-docprops-page .docprops-results-summary {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.project-docprops-page .docprops-result-stat {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.project-docprops-page .docprops-result-stat.success {
+  background: #e6f7ed;
+}
+
+.project-docprops-page .docprops-result-stat.failed {
+  background: #fde8e8;
+}
+
+.project-docprops-page .docprops-result-stat.total {
+  background: #f0f4f8;
+}
+
+.project-docprops-page .docprops-result-stat .stat-number {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.project-docprops-page .docprops-result-stat.success .stat-number {
+  color: #27ae60;
+}
+
+.project-docprops-page .docprops-result-stat.failed .stat-number {
+  color: #c0392b;
+}
+
+.project-docprops-page .docprops-result-stat.total .stat-number {
+  color: #333;
+}
+
+.project-docprops-page .docprops-result-stat .stat-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-docprops-page .docprops-results-list h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.project-docprops-page .docprops-results-scroll {
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+}
+
+.project-docprops-page .docprops-result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.project-docprops-page .docprops-result-item:last-child {
+  border-bottom: none;
+}
+
+.project-docprops-page .docprops-result-item.success {
+  background: #fafffe;
+}
+
+.project-docprops-page .docprops-result-item.failed {
+  background: #fffafa;
+}
+
+.project-docprops-page .docprops-result-item .result-icon {
+  width: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.project-docprops-page .docprops-result-item.success .result-icon {
+  color: #27ae60;
+}
+
+.project-docprops-page .docprops-result-item.failed .result-icon {
+  color: #c0392b;
+}
+
+.project-docprops-page .docprops-result-item .result-file {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-docprops-page .docprops-result-item .result-info {
+  font-size: 11px;
+  color: #27ae60;
+  white-space: nowrap;
+}
+
+.project-docprops-page .docprops-result-item .result-error {
+  font-size: 11px;
+  color: #c0392b;
+  white-space: nowrap;
+}

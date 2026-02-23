@@ -1,0 +1,104 @@
+{
+  "id": "TEST_20260220_095818_315934",
+  "className": "TEST",
+  "classes": [
+    "TEST"
+  ],
+  "isMultiClass": true,
+  "modelType": "object",
+  "shapeTypes": {
+    "DCS IO": "rectangle",
+    "Instrument": "circle"
+  },
+  "subclassRegions": {},
+  "trainingBoxSizes": {},
+  "created": "2026-02-20T09:58:32.272784",
+  "numTemplates": 6,
+  "numExamples": 6,
+  "multiOrientation": false,
+  "includeInverted": false,
+  "pdfFilename": "2000-F14-PID-PR-10001_1.pdf",
+  "pdfPath": "C:\\Users\\KirstyDellow-Pawski\\Downloads\\Drawings\\PID\\PID\\F14\\2000-F14-PID-PR-10001_1.pdf",
+  "trainingExamples": [
+    {
+      "id": "ex_0",
+      "bbox": {
+        "x": 0.24915299328859059,
+        "y": 0.3023132351543943,
+        "width": 0.015834201342281883,
+        "height": 0.02241611401425182
+      },
+      "page": 0,
+      "className": "DCS IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_1",
+      "bbox": {
+        "x": 0.25975280352086827,
+        "y": 0.15561458198021824,
+        "width": 0.015687919463087285,
+        "height": 0.022090261282660326
+      },
+      "page": 0,
+      "className": "DCS IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_2",
+      "bbox": {
+        "x": 0.7187672045406879,
+        "y": 0.5767294550734857,
+        "width": 0.015436241610738236,
+        "height": 0.021733966745843245
+      },
+      "page": 0,
+      "className": "DCS IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_3",
+      "bbox": {
+        "x": 0.7625255610318792,
+        "y": 0.5623281737121437,
+        "width": 0.01585570469798656,
+        "height": 0.023396674584323096
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_4",
+      "bbox": {
+        "x": 0.8191581572462249,
+        "y": 0.4393482489144151,
+        "width": 0.016442953020134248,
+        "height": 0.023871733966745804
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_5",
+      "bbox": {
+        "x": 0.569566068713297,
+        "y": 0.6296919072891924,
+        "width": 0.016526845637583835,
+        "height": 0.022684085510688862
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    }
+  ],
+  "projectId": "project_1771490240244",
+  "shapeType": "rectangle"
+}

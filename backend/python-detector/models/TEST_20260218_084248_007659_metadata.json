@@ -1,0 +1,150 @@
+{
+  "id": "TEST_20260218_084248_007659",
+  "className": "TEST",
+  "classes": [
+    "TEST"
+  ],
+  "isMultiClass": true,
+  "modelType": "object",
+  "shapeTypes": {
+    "IO": "rectangle",
+    "Instrument": "circle"
+  },
+  "subclassRegions": {},
+  "trainingBoxSizes": {},
+  "created": "2026-02-18T08:43:07.908113",
+  "numTemplates": 9,
+  "numExamples": 9,
+  "multiOrientation": false,
+  "includeInverted": false,
+  "pdfFilename": "2000-F12-PID-PR-10001_2.pdf",
+  "pdfPath": "C:\\Users\\KirstyDellow-Pawski\\Downloads\\Drawings\\PID\\PID\\F00-F18\\F12\\2000-F12-PID-PR-10001_2.pdf",
+  "trainingExamples": [
+    {
+      "id": "ex_0",
+      "bbox": {
+        "x": 0.3164429530201342,
+        "y": 0.17250593824228028,
+        "width": 0.016359060402684564,
+        "height": 0.02244655581947744
+      },
+      "page": 0,
+      "className": "IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_1",
+      "bbox": {
+        "x": 0.3523489932885906,
+        "y": 0.2266627078384798,
+        "width": 0.015939597315436243,
+        "height": 0.021971496437054632
+      },
+      "page": 0,
+      "className": "IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_2",
+      "bbox": {
+        "x": 0.5926525960832634,
+        "y": 0.7652830871437054,
+        "width": 0.015687919463087285,
+        "height": 0.022327790973871817
+      },
+      "page": 0,
+      "className": "IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_3",
+      "bbox": {
+        "x": 0.4999826930513318,
+        "y": 0.7651666564216523,
+        "width": 0.015939597315436243,
+        "height": 0.02211995249406176
+      },
+      "page": 0,
+      "className": "IO",
+      "shapeType": "rectangle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_4",
+      "bbox": {
+        "x": 0.7127085026478607,
+        "y": 0.6504772630270189,
+        "width": 0.015771812080537018,
+        "height": 0.022684085510688862
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_5",
+      "bbox": {
+        "x": 0.8157333066799497,
+        "y": 0.6485656013398159,
+        "width": 0.016442953020134248,
+        "height": 0.02244655581947754
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_6",
+      "bbox": {
+        "x": 0.2905556288341548,
+        "y": 0.5426677205500297,
+        "width": 0.015939597315436205,
+        "height": 0.02250593824228031
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_7",
+      "bbox": {
+        "x": 0.33180058626520553,
+        "y": 0.2699168878043349,
+        "width": 0.01644295302013421,
+        "height": 0.022149643705463185
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    },
+    {
+      "id": "ex_8",
+      "bbox": {
+        "x": 0.42616945817166524,
+        "y": 0.15363543367725654,
+        "width": 0.015771812080536962,
+        "height": 0.02286223277909738
+      },
+      "page": 0,
+      "className": "Instrument",
+      "shapeType": "circle",
+      "subclassRegions": {}
+    }
+  ],
+  "projectId": "project_1771370311059",
+  "shapeType": "rectangle",
+  "detectorType": "template",
+  "displayType": "⚡ Template",
+  "recommendedConfidence": 0.575,
+  "recommendedOcrFormat": "PDAHH 12345A",
+  "recommendedOcrPattern": "LLLLL NNNNNL",
+  "subclassOcrFormats": null,
+  "subclassOcrPatterns": null
+}

@@ -1,0 +1,14 @@
+# PDF Viewer Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# OCR
+paddleocr>=3.3.0
+paddlepaddle>=3.2.0
+
+# PDF processing
+pdf2image>=1.16.0
+
+# Image processing
+opencv-python==4.10.0.84
+numpy==1.26.4
+pillow>=10.0.0

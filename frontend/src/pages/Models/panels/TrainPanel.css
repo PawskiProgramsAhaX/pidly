@@ -1,0 +1,373 @@
+/* ============================================ */
+/* Train Panel                                  */
+/* ============================================ */
+
+.train-panel-sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #222;
+  border-left: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.train-panel-sidebar button:focus,
+.train-panel-sidebar select:focus,
+.train-panel-sidebar input:focus {
+  outline: none;
+}
+
+/* ── Header ───────────────────────────────── */
+
+.train-panel-sidebar .tp-header {
+  padding: 12px 14px;
+  border-bottom: 1px solid #2a2a2a;
+  flex-shrink: 0;
+}
+
+.train-panel-sidebar .tp-header h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ── Content ──────────────────────────────── */
+
+.train-panel-sidebar .tp-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Sections ─────────────────────────────── */
+
+.train-panel-sidebar .tp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.train-panel-sidebar .tp-section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.train-panel-sidebar .tp-section h4 {
+  margin: 0;
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Mode buttons ─────────────────────────── */
+
+.train-panel-sidebar .tp-mode-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.train-panel-sidebar .tp-mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.12s;
+  text-align: left;
+}
+
+.train-panel-sidebar .tp-mode-btn:hover:not(:disabled) {
+  background: #333;
+  border-color: #444;
+}
+
+.train-panel-sidebar .tp-mode-btn.active {
+  background: #2a3a4a;
+  border-color: #3a4a5a;
+}
+
+.train-panel-sidebar .tp-mode-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.train-panel-sidebar .tp-mode-icon {
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+  color: #888;
+}
+
+.train-panel-sidebar .tp-mode-btn.active .tp-mode-icon {
+  color: #fff;
+}
+
+.train-panel-sidebar .tp-mode-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.train-panel-sidebar .tp-mode-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.train-panel-sidebar .tp-mode-btn.active .tp-mode-title {
+  color: #fff;
+}
+
+.train-panel-sidebar .tp-mode-desc {
+  font-size: 10px;
+  color: #666;
+}
+
+.train-panel-sidebar .tp-mode-btn.active .tp-mode-desc {
+  color: #888;
+}
+
+/* ── Selects & inputs ─────────────────────── */
+
+.train-panel-sidebar .tp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.train-panel-sidebar .tp-field-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+}
+
+.train-panel-sidebar .tp-select {
+  padding: 7px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #2a2a2a;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ── Shape buttons ────────────────────────── */
+
+.train-panel-sidebar .tp-shape-group {
+  display: flex;
+  gap: 4px;
+}
+
+.train-panel-sidebar .tp-shape-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 0;
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #999;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.train-panel-sidebar .tp-shape-btn:hover {
+  background: #333;
+  border-color: #444;
+  color: #ccc;
+}
+
+.train-panel-sidebar .tp-shape-btn.active {
+  background: #2a3a4a;
+  border-color: #3a4a5a;
+  color: #fff;
+}
+
+.train-panel-sidebar .tp-shape-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.train-panel-sidebar .tp-input {
+  padding: 7px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #2a2a2a;
+  color: #fff;
+  font-weight: 500;
+}
+
+.train-panel-sidebar .tp-input::placeholder { color: #666; }
+
+.train-panel-sidebar .tp-muted {
+  font-size: 12px;
+  color: #666;
+  padding: 4px 0;
+}
+
+/* ── Model tags ───────────────────────────── */
+
+.train-panel-sidebar .tp-model-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.train-panel-sidebar .tp-model-tag {
+  font-size: 11px;
+  color: #ccc;
+  background: #252525;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  font-weight: 600;
+}
+
+/* ── Option checkboxes ────────────────────── */
+
+.train-panel-sidebar .tp-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.train-panel-sidebar .tp-option:hover {
+  background: #333;
+  border-color: #444;
+}
+
+.train-panel-sidebar .tp-option input { display: none; }
+
+.train-panel-sidebar .tp-option-check {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #2c2f33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.1s;
+}
+
+.train-panel-sidebar .tp-option input:checked + .tp-option-check {
+  background: #3a4a5a;
+  border-color: #4a6070;
+}
+
+.train-panel-sidebar .tp-option input:checked + .tp-option-check::after {
+  content: '✓';
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.train-panel-sidebar .tp-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.train-panel-sidebar .tp-option-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.train-panel-sidebar .tp-option input:checked ~ .tp-option-text .tp-option-title {
+  color: #fff;
+}
+
+.train-panel-sidebar .tp-option-desc {
+  font-size: 10px;
+  color: #666;
+}
+
+/* ── Examples summary ─────────────────────── */
+
+.train-panel-sidebar .tp-examples-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.train-panel-sidebar .tp-ex-stat {
+  padding: 8px 10px;
+  background: #2a2a2a;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.train-panel-sidebar .tp-ex-val {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.train-panel-sidebar .tp-ex-lbl {
+  font-size: 10px;
+  color: #aaa;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ── Train button ─────────────────────────── */
+
+.train-panel-sidebar .tp-train-btn {
+  padding: 11px 16px;
+  background: #2a3a4a;
+  border: 1px solid #3a4a5a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.12s;
+  flex-shrink: 0;
+}
+
+.train-panel-sidebar .tp-train-btn:hover:not(:disabled) {
+  background: #354b5e;
+  border-color: #4a6070;
+}
+
+.train-panel-sidebar .tp-train-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

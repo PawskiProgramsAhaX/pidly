@@ -1,0 +1,1538 @@
+/* Regions Page Styles - Dark Theme Matching Models Page */
+.project-regions-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.project-regions-page .regions-header {
+  background: #000000;
+  border-bottom: 1px solid #333;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.project-regions-page .regions-header .back-btn {
+  background: none;
+  border: 1px solid #555;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: all 0.2s;
+}
+
+.project-regions-page .regions-header .back-btn:hover {
+  background: #333;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.project-regions-page .regions-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.project-regions-page .regions-header .brand-title {
+  margin-left: auto;
+  color: #ffffff;
+}
+
+.project-regions-page .regions-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Loading State */
+.project-regions-page .loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+  color: #888;
+}
+
+.project-regions-page .spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Sidebar */
+.project-regions-page .regions-sidebar {
+  background: #1e1e1e;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.project-regions-page .sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin: 4px 12px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.project-regions-page .sidebar-item:hover {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.project-regions-page .sidebar-item.selected {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+.project-regions-page .home-item {
+  margin: 8px 12px 4px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  outline: none;
+}
+
+.project-regions-page .home-item:hover {
+  background: #252525;
+}
+
+.project-regions-page .home-item.selected {
+  background: #2a2a2a;
+}
+
+.project-regions-page .home-item .item-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.project-regions-page .item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.project-regions-page .sidebar-divider {
+  height: 1px;
+  background: #333;
+  margin: 8px 16px;
+}
+
+/* Create Region Button */
+.project-regions-page .create-region-btn {
+  margin: 8px 12px;
+  padding: 10px 16px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  outline: none;
+}
+
+.project-regions-page .create-region-btn:hover {
+  background: #252525;
+}
+
+.project-regions-page .create-region-btn:focus {
+  outline: none;
+}
+
+/* Regions Section */
+.project-regions-page .regions-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 8px 0;
+  background: #1e1e1e;
+}
+
+.project-regions-page .regions-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.project-regions-page .regions-section-header .section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Regions Search */
+.project-regions-page .regions-search {
+  padding: 0 12px 12px;
+}
+
+.project-regions-page .regions-search input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 13px;
+  box-sizing: border-box;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.project-regions-page .regions-search input::placeholder {
+  color: #888;
+}
+
+.project-regions-page .regions-search input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.project-regions-page .type-count {
+  font-size: 11px;
+  color: #aaa;
+  background: #333;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* New Region Button */
+.project-regions-page .new-region-btn {
+  margin: 8px 12px;
+  padding: 10px 16px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  outline: none;
+}
+
+.project-regions-page .new-region-btn:hover {
+  background: #252525;
+}
+
+.project-regions-page .new-region-btn:focus {
+  outline: none;
+}
+
+/* Region List */
+.project-regions-page .region-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px 8px;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2a2a2a;
+  background: #1e1e1e;
+}
+
+.project-regions-page .region-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-regions-page .region-list::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.project-regions-page .region-list::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.project-regions-page .region-list::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.project-regions-page .no-regions {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-size: 13px;
+}
+
+/* Region List Item */
+.project-regions-page .region-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-bottom: 2px;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: 3px solid transparent !important;
+  outline: none !important;
+}
+
+.project-regions-page .region-list-item:hover {
+  background: #252525;
+}
+
+.project-regions-page .region-list-item.selected {
+  background: #2a2a2a;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: 3px solid #3498db !important;
+  outline: none !important;
+}
+
+.project-regions-page .region-list-item.selected:hover {
+  background: #2a2a2a;
+}
+
+.project-regions-page .region-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-regions-page .region-item-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-regions-page .region-item-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+}
+
+.project-regions-page .region-item-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.project-regions-page .region-list-item:hover .region-item-actions {
+  opacity: 1;
+}
+
+.project-regions-page .region-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.15s;
+}
+
+.project-regions-page .region-action-btn:hover {
+  background: #333;
+  color: #aaa;
+}
+
+.project-regions-page .region-action-btn.delete:hover {
+  background: #3a2525;
+  color: #e74c3c;
+}
+
+/* Main Content */
+.project-regions-page .regions-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  background: #1a1a1a;
+}
+
+/* Home Content */
+.project-regions-page .home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.project-regions-page .home-content h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.project-regions-page .home-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.project-regions-page .home-header-section h2 {
+  margin: 0;
+}
+
+.project-regions-page .home-icon {
+  margin: 0 0 12px 0;
+}
+
+.project-regions-page .home-subtitle {
+  color: #888;
+  font-size: 16px;
+  margin: 0 0 32px;
+}
+
+/* Stats Row */
+.project-regions-page .home-stats-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-regions-page .home-stats-row .stat-card {
+  flex: 1;
+  max-width: 180px;
+}
+
+.project-regions-page .stat-card {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px 32px;
+  text-align: center;
+  min-width: 140px;
+}
+
+.project-regions-page .stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.project-regions-page .stat-label {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* Actions Section */
+.project-regions-page .home-actions-section {
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 24px 0;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.project-regions-page .home-actions-section h3 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.project-regions-page .home-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 400px;
+}
+
+.project-regions-page .action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #252525 0%, #2a2a2a 100%);
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.project-regions-page .action-card:hover {
+  background: linear-gradient(135deg, #2a2a2a 0%, #333 100%);
+  border-color: #3498db;
+}
+
+.project-regions-page .action-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-regions-page .action-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.project-regions-page .action-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.project-regions-page .action-desc {
+  font-size: 11px;
+  color: #888;
+}
+
+/* Region Type Content */
+.project-regions-page .region-type-content {
+  padding: 20px;
+}
+
+.project-regions-page .region-type-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #333;
+}
+
+.project-regions-page .region-type-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-regions-page .region-type-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Sub-regions Search */
+.project-regions-page .sub-regions-search {
+  margin-bottom: 16px;
+}
+
+.project-regions-page .sub-regions-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #2a2a2a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.project-regions-page .sub-regions-search input::placeholder {
+  color: #888;
+}
+
+.project-regions-page .sub-regions-search input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Sub-regions Table */
+.project-regions-page .sub-regions-table {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-regions-page .sub-regions-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-regions-page .sub-regions-table th,
+.project-regions-page .sub-regions-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.project-regions-page .sub-regions-table th {
+  background: #333;
+  font-weight: 600;
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.project-regions-page .sub-regions-table td {
+  font-size: 14px;
+  color: #fff;
+}
+
+.project-regions-page .sub-regions-table tr:last-child td {
+  border-bottom: none;
+}
+
+.project-regions-page .sub-regions-table tr.clickable-row {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.project-regions-page .sub-regions-table tr.clickable-row:hover {
+  background: #333;
+}
+
+.project-regions-page .sub-region-name {
+  font-weight: 500;
+}
+
+.project-regions-page .region-documents {
+  color: #ccc;
+  max-width: 300px;
+}
+
+.project-regions-page .region-documents .doc-names {
+  display: inline;
+}
+
+.project-regions-page .region-documents .regions-count {
+  color: #888;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.project-regions-page .region-objects-count {
+  text-align: center;
+  color: #888;
+}
+
+.project-regions-page .region-actions .delete-btn {
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.project-regions-page .region-actions .delete-btn:hover {
+  background: #3a2525;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+/* No Regions Message */
+.project-regions-page .no-regions-message {
+  text-align: center;
+  color: #888;
+  padding: 40px 20px;
+  background: #2a2a2a;
+  border-radius: 8px;
+}
+
+.project-regions-page .no-regions-message p {
+  margin: 8px 0;
+}
+
+/* Sub-region Detail View */
+.project-regions-page .sub-region-detail {
+  background: #2a2a2a;
+  border-radius: 12px;
+  border: 1px solid #444;
+  min-width: 0;
+  width: 100%;
+}
+
+.project-regions-page .sub-region-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #333;
+  border-bottom: 1px solid #444;
+  border-radius: 12px 12px 0 0;
+}
+
+.project-regions-page .back-to-list-btn {
+  padding: 6px 12px;
+  background: #2a2a2a;
+  border: 1px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #ccc;
+  transition: all 0.15s;
+}
+
+.project-regions-page .back-to-list-btn:hover {
+  background: #333;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.project-regions-page .sub-region-detail-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.project-regions-page .sub-region-doc {
+  font-size: 13px;
+  color: #888;
+}
+
+.project-regions-page .sub-region-detail-header .goto-btn {
+  padding: 8px 14px;
+  background: #2a2a2a;
+  border: 1px solid #3498db;
+  border-radius: 6px;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.project-regions-page .sub-region-detail-header .goto-btn:hover {
+  background: #1a3a4a;
+}
+
+/* Objects in Region */
+.project-regions-page .objects-in-region {
+  padding: 20px;
+  overflow: hidden;
+  min-width: 0;
+  width: 100%;
+}
+
+.project-regions-page .objects-in-region h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.project-regions-page .no-objects-message {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  padding: 24px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.project-regions-page .objects-table {
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-regions-page .objects-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-regions-page .objects-table th,
+.project-regions-page .objects-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.project-regions-page .objects-table th {
+  background: #333;
+  font-weight: 600;
+  font-size: 12px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.project-regions-page .objects-table td {
+  font-size: 14px;
+  color: #fff;
+}
+
+.project-regions-page .objects-table tr:last-child td {
+  border-bottom: none;
+}
+
+.project-regions-page .objects-table tr:hover {
+  background: #333;
+}
+
+.project-regions-page .obj-document {
+  color: #888;
+  font-size: 12px;
+}
+
+/* Find button in objects table */
+.project-regions-page .objects-table .find-col {
+  width: 40px;
+}
+
+.project-regions-page .objects-table .find-cell {
+  width: 40px;
+  text-align: center;
+  padding: 6px !important;
+}
+
+.project-regions-page .objects-table .find-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.project-regions-page .objects-table .find-btn:hover {
+  background: #1a3a4a;
+}
+
+/* Image column in objects table */
+.project-regions-page .objects-table .image-col {
+  width: 120px;
+}
+
+.project-regions-page .objects-table .image-cell {
+  width: 120px;
+  text-align: center;
+  padding: 4px !important;
+}
+
+.project-regions-page .objects-table .object-thumbnail {
+  max-width: 100px;
+  max-height: 80px;
+  border-radius: 4px;
+  border: 1px solid #555;
+}
+
+.project-regions-page .objects-table .loading-thumbnail {
+  color: #888;
+  font-size: 12px;
+}
+
+.project-regions-page .objects-table .load-thumbnail-btn {
+  background: none;
+  border: 1px solid #555;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.project-regions-page .objects-table .load-thumbnail-btn:hover {
+  background: #333;
+  border-color: #666;
+}
+
+/* Editable cells */
+.project-regions-page .editable-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.project-regions-page .editable-cell:hover {
+  color: #3498db;
+}
+
+.project-regions-page .edit-name-input,
+.project-regions-page .edit-name-input-inline {
+  padding: 6px 10px;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #2a2a2a;
+  color: #fff;
+  outline: none;
+}
+
+.project-regions-page .edit-name-input-inline {
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Documents section in detail view */
+.project-regions-page .sub-region-documents {
+  padding: 16px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.project-regions-page .sub-region-documents h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.project-regions-page .documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-regions-page .document-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.project-regions-page .doc-name {
+  font-weight: 500;
+  flex: 1;
+  color: #fff;
+}
+
+.project-regions-page .doc-objects {
+  color: #888;
+  font-size: 12px;
+  background: #444;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* Objects header with export button */
+.project-regions-page .objects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.project-regions-page .objects-header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.project-regions-page .objects-header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.project-regions-page .export-csv-btn {
+  padding: 6px 12px;
+  background: #1a3a2a;
+  border: 1px solid #27ae60;
+  border-radius: 6px;
+  color: #27ae60;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.project-regions-page .export-csv-btn:hover {
+  background: #254a35;
+}
+
+/* View toggle buttons */
+.project-regions-page .view-toggle-btn {
+  padding: 6px 12px;
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 6px;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.project-regions-page .view-toggle-btn:hover {
+  background: #3a3a3a;
+  border-color: #666;
+}
+
+.project-regions-page .view-toggle-btn.active {
+  background: #3498db;
+  border-color: #3498db;
+  color: white;
+}
+
+/* By-class view */
+.project-regions-page .by-class-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Class tabs - Excel-like */
+.project-regions-page .class-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #444;
+  background: #2a2a2a;
+  overflow-x: auto;
+  padding: 0 4px;
+}
+
+.project-regions-page .class-tab {
+  padding: 10px 20px;
+  background: #333;
+  border: 1px solid #444;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: -2px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.project-regions-page .class-tab:hover {
+  background: #3a3a3a;
+}
+
+.project-regions-page .class-tab.active {
+  background: #2a2a2a;
+  border-color: #444;
+  border-bottom-color: #2a2a2a;
+  color: #3498db;
+  font-weight: 600;
+}
+
+.project-regions-page .class-tab-content {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Scrollable table wrapper */
+.project-regions-page .objects-table-scroll-wrapper {
+  max-height: 500px;
+  overflow: auto;
+  min-width: 0;
+}
+
+.project-regions-page .objects-table-scroll-wrapper .objects-table {
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.project-regions-page .objects-table-scroll-wrapper .objects-table table {
+  width: auto;
+  min-width: max-content;
+}
+
+/* Resizable table */
+.project-regions-page .resizable-table th.resizable-col {
+  position: relative;
+  min-width: 80px;
+}
+
+.project-regions-page .resizable-table .col-header-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+/* Column resizer */
+.project-regions-page .column-resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.project-regions-page .column-resizer:hover {
+  background: #3498db;
+}
+
+/* Make cells respect width and truncate */
+.project-regions-page .resizable-table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Delete group button */
+.project-regions-page .delete-group-btn {
+  padding: 6px 12px;
+  background: #3a2525;
+  border: 1px solid #e53935;
+  border-radius: 6px;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.project-regions-page .delete-group-btn:hover {
+  background: #4a3030;
+}
+
+/* Modal Styles */
+.project-regions-page .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.project-regions-page .modal {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 400px;
+  max-width: 500px;
+  border: 1px solid #444;
+}
+
+.project-regions-page .modal h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.project-regions-page .modal-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.project-regions-page .form-group {
+  margin-bottom: 20px;
+}
+
+.project-regions-page .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.project-regions-page .form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #1a1a1a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.project-regions-page .form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.project-regions-page .modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.project-regions-page .modal-actions button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project-regions-page .modal-actions button:first-child {
+  background: #333;
+  border: 1px solid #555;
+  color: #ccc;
+}
+
+.project-regions-page .modal-actions button:first-child:hover {
+  background: #3a3a3a;
+}
+
+.project-regions-page .modal-actions .primary-btn {
+  background: #3498db;
+  border: none;
+  color: white;
+}
+
+.project-regions-page .modal-actions .primary-btn:hover {
+  background: #2980b9;
+}
+
+.project-regions-page .modal-actions .primary-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* Sidebar resize handle */
+.project-regions-page .sidebar-resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  transition: background 0.2s;
+}
+
+.project-regions-page .sidebar-resize-handle:hover {
+  background: #3498db;
+}
+
+/* Color settings in region type header */
+.project-regions-page .region-type-settings {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.project-regions-page .color-setting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-regions-page .color-setting label {
+  font-size: 12px;
+  color: #888;
+}
+
+.project-regions-page .color-picker {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.project-regions-page .color-picker::-webkit-color-swatch-wrapper {
+  padding: 2px;
+}
+
+.project-regions-page .color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+/* Region Type Detail View */
+.project-regions-page .region-type-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-regions-page .header-spacer {
+  flex: 1;
+}
+
+.project-regions-page .region-type-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #2a2a2a;
+  border-bottom: 1px solid #444;
+  flex-shrink: 0;
+}
+
+.project-regions-page .region-type-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-regions-page .region-count-badge {
+  font-size: 13px;
+  color: #888;
+  background: #333;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.project-regions-page .delete-type-btn {
+  padding: 8px 16px;
+  background: #3a2525;
+  border: 1px solid #e53935;
+  border-radius: 6px;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.project-regions-page .delete-type-btn:hover {
+  background: #4a3030;
+}
+
+/* Sub-region Search */
+.project-regions-page .subregion-search {
+  padding: 16px 20px;
+  background: #2a2a2a;
+  border-bottom: 1px solid #444;
+}
+
+.project-regions-page .subregion-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #1a1a1a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.project-regions-page .subregion-search input::placeholder {
+  color: #888;
+}
+
+.project-regions-page .subregion-search input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Region Type Content */
+.project-regions-page .region-type-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Home Search Panel */
+.project-regions-page .home-search-panel {
+  width: 100%;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.project-regions-page .home-search-panel h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-regions-page .home-search-panel .search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #1a1a1a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.project-regions-page .home-search-panel .search-input::placeholder {
+  color: #888;
+}
+
+.project-regions-page .home-search-panel .search-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.project-regions-page .search-results-container {
+  margin-top: 16px;
+}
+
+.project-regions-page .search-results-container h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.project-regions-page .no-results {
+  color: #888;
+  font-size: 13px;
+}
+
+.project-regions-page .search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.project-regions-page .search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.project-regions-page .search-result-item:hover {
+  background: #3a3a3a;
+  border-color: #3498db;
+}
+
+.project-regions-page .result-type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3498db;
+  background: #1a3a4a;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.project-regions-page .result-name {
+  flex: 1;
+  font-weight: 500;
+  color: #fff;
+}
+
+.project-regions-page .result-document {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Header Color Controls */
+.project-regions-page .header-color-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.project-regions-page .color-setting-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-regions-page .color-setting-inline label {
+  font-size: 12px;
+  color: #888;
+}
+
+.project-regions-page .color-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.project-regions-page .no-color-btn {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.project-regions-page .no-color-btn:hover {
+  background: #333;
+  border-color: #666;
+}
+
+.project-regions-page .no-color-btn.active {
+  background: #3498db;
+  border-color: #3498db;
+  color: white;
+}
+
+.project-regions-page .color-setting-inline input[type="color"] {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 2px;
+  background: #2a2a2a;
+}
+
+/* Editable name styles */
+.project-regions-page .editable-name {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.project-regions-page .editable-name:hover {
+  color: #3498db;
+}
