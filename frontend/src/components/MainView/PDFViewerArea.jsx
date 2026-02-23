@@ -5,7 +5,7 @@ import { BACKEND_URL } from '../../utils/config';
 import { AssignDialog, HotspotContextMenu, MarkupContextMenu, NoteDialog, SaveSymbolDialog, RegionAssignDialog, RegionEditDialog, ObjectClassDialog, ZoomSettingsDialog, loadZoomSettings, saveZoomSettings } from './Dialogs';
 import { ViewPanel, SearchPanel, LinksPanel, SymbolsPanel, OCRPanel, PropertiesPanel, MarkupHistoryPanel } from './Panels';
 import { TopToolbar, MarkupToolbar, BottomToolbar } from './Toolbars';
-import ToolOptionsBar from './toolbars/ToolOptionsBar';
+import ToolOptionsBar from './Toolbars/ToolOptionsBar';
 import SinglePageView from './views/SinglePageView';
 import ContinuousView from './views/ContinuousView';
 // SideBySideView removed — now handled by ContinuousView with memoized pages
