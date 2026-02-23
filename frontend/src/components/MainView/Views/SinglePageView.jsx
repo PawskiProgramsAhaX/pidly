@@ -135,7 +135,6 @@ export default function SinglePageView(props) {
         <div 
           ref={containerRef}
           className="pdf-container"
-          style={isRotatingMarkup ? { cursor: ROTATE_CURSOR } : undefined}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
@@ -184,7 +183,8 @@ export default function SinglePageView(props) {
           }}
           style={{ 
             backgroundColor: pdfBackgroundColor,
-            cursor: pendingPlacement ? 'crosshair' :
+            cursor: isRotatingMarkup ? ROTATE_CURSOR :
+                    pendingPlacement ? 'crosshair' :
                     pendingShape ? 'default' :
                     symbolCaptureMode ? 'crosshair' :
                     (markupMode === 'select' || (selectMode && !markupMode && !panMode && !zoomMode)) ? (isDraggingMarkup ? 'grabbing' : isResizingMarkup ? (resizeHandle?.includes('n') || resizeHandle?.includes('s') ? 'ns-resize' : 'ew-resize') : 'default') :
