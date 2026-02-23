@@ -6,14 +6,14 @@ import { AssignDialog, HotspotContextMenu, MarkupContextMenu, NoteDialog, SaveSy
 import { ViewPanel, SearchPanel, LinksPanel, SymbolsPanel, OCRPanel, PropertiesPanel, MarkupHistoryPanel } from './Panels';
 import { TopToolbar, MarkupToolbar, BottomToolbar } from './Toolbars';
 import ToolOptionsBar from './Toolbars/ToolOptionsBar';
-import SinglePageView from './views/SinglePageView';
-import ContinuousView from './views/ContinuousView';
+import SinglePageView from './Views/SinglePageView';
+import ContinuousView from './Views/ContinuousView';
 // SideBySideView removed — now handled by ContinuousView with memoized pages
-import useZoomPan from './hooks/useZoomPan';
-import usePdfRenderer from './hooks/usePdfRenderer';
-import useContinuousLayout, { isContinuousView } from './hooks/useContinuousLayout';
-import useMarkups from './hooks/useMarkups';
-import { useSaveMarkups } from './hooks/useSaveMarkups';
+import useZoomPan from './Hooks/useZoomPan';
+import usePdfRenderer from './Hooks/usePdfRenderer';
+import useContinuousLayout, { isContinuousView } from './Hooks/useContinuousLayout';
+import useMarkups from './Hooks/useMarkups';
+import { useSaveMarkups } from './Hooks/useSaveMarkups';
 import { deleteAnnotationsFromPdf, parseAnnotationsFromPdf, dumpAllAnnotationData, stripAllAnnotations } from './pdfAnnotationUtils';
 import './PDFViewerArea.css';
 
